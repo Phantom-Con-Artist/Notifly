@@ -1,0 +1,21 @@
+# How GitHub groups the auto-generated release notes.
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: New
+      labels:
+        - enhancement
+    - title: Fixed
+      labels:
+        - bug
+    - title: Quick capture app
+      labels:
+        - quick-capture
+    - title: Docs
+      labels:
+        - documentation
+    - title: Other changes
+      labels:
+        - '*'

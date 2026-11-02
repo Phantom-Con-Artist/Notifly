@@ -1,0 +1,33 @@
+[package]
+name = "notifly-daemon"
+version = "0.1.0"
+edition = "2021"
+description = "Notifly quick capture: a small background app that opens a capture window from a global shortcut and saves Markdown notes, files and voice notes into an Obsidian vault."
+authors = ["Subhradeep Sarkar"]
+license = "MIT"
+repository = "https://github.com/Phantom-Con-Artist/Notifly"
+homepage = "https://github.com/Phantom-Con-Artist/Notifly#readme"
+readme = "../README.md"
+keywords = ["obsidian", "notes", "quick-capture", "markdown", "hotkey"]
+categories = ["gui"]
+publish = false
+
+[dependencies]
+wry = "0.57"
+base64 = "0.22"
+tao = "0.37"
+global-hotkey = "0.7"
+mouse_position = "0.1.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4"] }
+chrono = "0.4"
+fs2 = "0.4"
+
+winit = { version = "0.30", default-features = false, features = ["x11", "wayland", "rwh_06"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+webkit2gtk = "2"
+ashpd = { version = "0.13", default-features = false, features = ["tokio", "global_shortcuts"] }
+futures-util = "0.3"
+tokio = { version = "1", features = ["rt", "time", "macros"] }

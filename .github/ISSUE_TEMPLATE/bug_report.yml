@@ -1,0 +1,40 @@
+name: Something is not working
+description: Tell us what happened
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: dropdown
+    id: part
+    attributes:
+      label: Which part?
+      options:
+        - Alt+C capture window (quick capture app)
+        - Capture window inside Obsidian
+        - Inbox
+        - Files or voice notes
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Your system
+      description: For example, Windows 11, macOS 15 (Apple chip), Fedora 44 with KDE and Wayland.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Notifly and Obsidian versions
+      placeholder: Notifly 1.0.0, Obsidian 1.8.10
+  - type: textarea
+    id: log
+    attributes:
+      label: Log (optional)
+      description: If quick capture is involved, the file `helper.log` in `.obsidian/plugins/notifly/helper/` can help. Remove anything private first.

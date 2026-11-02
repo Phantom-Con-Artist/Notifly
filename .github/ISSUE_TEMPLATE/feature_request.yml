@@ -1,0 +1,11 @@
+name: An idea
+description: Suggest something
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Notifly to do?
+      description: Tell us the situation, not only the feature. What are you trying to capture or find?
+    validations:
+      required: true

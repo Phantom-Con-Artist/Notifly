@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notifly</title>
+<style>/*CSS*/</style>
+</head>
+<body>
+<div class="frame">
+ <header id="bar" class="bar">
+  <button id="chip" class="chip" type="button" aria-haspopup="listbox" aria-expanded="false" title="Category (Tab or Alt)">
+   <span id="glyph" class="glyph"></span><span id="title" class="title"></span><span class="caret">▾</span>
+  </button>
+  <span class="sep">in</span><span id="folder" class="folder"></span>
+  <span id="status" class="status"></span>
+ </header>
+ <section id="picker" class="picker" aria-label="Categories" hidden>
+  <input id="cat-find" class="cat-find" type="text" placeholder="Find or make a category…" autocomplete="off" spellcheck="false" aria-label="Find or make a category">
+  <div id="cat-pills" class="cat-pills" role="listbox" aria-label="Categories"></div>
+  <p id="cat-note" class="cat-note"></p>
+ </section>
+ <main id="editor" class="editor nf-live"></main>
+ <p id="error" class="error" role="alert" hidden></p>
+ <footer class="actions">
+  <button id="import" type="button" class="icon" aria-label="Add a file" title="Add a file: PDF, picture, sound, video and more">
+   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21.4 11.1-8.5 8.5a5.5 5.5 0 0 1-7.8-7.8l8.5-8.5a3.7 3.7 0 0 1 5.2 5.2l-8.5 8.5a1.8 1.8 0 0 1-2.6-2.6l7.8-7.8"/></svg>
+  </button>
+  <button id="record" type="button" class="icon" aria-label="Record a voice note" title="Record a voice note">
+   <svg class="mic" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></svg>
+   <span class="rec-dot" aria-hidden="true"></span><span id="rec-time" class="rec-time"></span>
+  </button>
+  <input id="file" type="file" multiple hidden>
+  <span id="hint-manual" class="hint"><kbd>Tab</kbd> categories · <kbd>Ctrl</kbd> <kbd>Enter</kbd> save</span>
+  <span id="hint-auto" class="hint" hidden><kbd>Tab</kbd> categories · <kbd>Ctrl</kbd> <kbd>Enter</kbd> finish · <kbd>Esc</kbd> hide</span>
+  <button id="preview" type="button" class="ghost" aria-pressed="true" title="Live preview (Alt+P)">Preview</button>
+  <button id="cancel" type="button">Cancel</button>
+  <button id="save" type="button" class="mod-cta" disabled>Save</button>
+ </footer>
+</div>
+<script>/*JS*/</script>
+</body>
+</html>

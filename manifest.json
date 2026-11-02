@@ -1,0 +1,10 @@
+{
+  "id": "notifly",
+  "name": "Notifly",
+  "version": "1.0.0",
+  "minAppVersion": "1.7.2",
+  "description": "Capture thoughts, files and voice notes into Markdown notes, even while Obsidian is closed.",
+  "author": "Subhradeep Sarkar",
+  "authorUrl": "https://github.com/Phantom-Con-Artist",
+  "isDesktopOnly": true
+}

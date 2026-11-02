@@ -1,0 +1,11 @@
+# Keep line endings the same on every system.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.wav binary
+
+# Generated or locked files: collapsed in diffs and left out of language stats.
+styles.css linguist-generated
+daemon/ui/popup.html linguist-generated
+package-lock.json linguist-generated
+daemon/Cargo.lock linguist-generated

@@ -1,6 +1,7 @@
 import esbuild from 'esbuild';
 import { readFileSync, writeFileSync } from 'node:fs';
-const here = new URL('.', import.meta.url).pathname;
+import { fileURLToPath } from 'node:url';
+const here = fileURLToPath(new URL('.', import.meta.url));
 const js = (await esbuild.build({ entryPoints: [here + 'editor.ts'], bundle: true, minify: true, format: 'iife', target: 'es2020', write: false })).outputFiles[0].text;
 const html = readFileSync(here + 'index.html', 'utf8')
  .replace('/*CSS*/', () => readFileSync(here + 'live.css', 'utf8') + readFileSync(here + 'popup.css', 'utf8'))

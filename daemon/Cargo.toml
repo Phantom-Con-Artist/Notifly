@@ -14,7 +14,7 @@ publish = false
 
 [dependencies]
 wry = "0.57"
-base64 = "0.22"
+base64 = "0.23"
 tao = "0.37"
 global-hotkey = "0.7"
 mouse_position = "0.1.4"

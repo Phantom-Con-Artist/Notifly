@@ -320,7 +320,7 @@ mod tests {
         assert!(fs::read_to_string(one).unwrap().contains("Hello [[World]]"));
         fs::rename(root.join("thoughts"), root.join("renamed")).unwrap();
         let two = save(&config, "Second", "thought").unwrap();
-        assert!(two.starts_with(root.join("renamed")));
+        assert!(two.starts_with(root.canonicalize().unwrap().join("renamed")));
         assert!(two.ends_with("Thought 2.md"));
         // Autosave rewrites its own note and follows a category change without leaving a copy.
         let first = write_note(&config, None, "thought", "draft").unwrap();
@@ -346,7 +346,7 @@ mod tests {
         let evil = serde_json::json!({"vault":root,"folder":"t","templates":[{"id":"x\nevil: true","name":"X","prefix":"../../escape"}]});
         fs::write(&config, evil.to_string()).unwrap();
         let saved = write_note(&config, None, "x\nevil: true", "hello").unwrap();
-        assert!(saved.path.starts_with(root.join("t")), "note stayed in the capture folder");
+        assert!(saved.path.starts_with(root.canonicalize().unwrap().join("t")), "note stayed in the capture folder");
         let text = fs::read_to_string(&saved.path).unwrap();
         assert!(!text.contains("evil: true"), "the id cannot add front matter lines");
         assert!(!root.join("escape 1.md").exists());

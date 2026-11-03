@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Shorter plugin description (no change in how Notifly works).
+- Fixes for building the quick capture app on Windows.
+
 ## 1.0.0
 
 First release.

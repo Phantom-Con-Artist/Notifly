@@ -1,7 +1,7 @@
 {
   "name": "notifly",
-  "version": "1.0.0",
-  "description": "Capture thoughts, files and voice notes into Obsidian from anywhere, even when Obsidian is closed.",
+  "version": "1.0.1",
+  "description": "Capture thoughts, files and voice notes from anywhere, even when the app is closed.",
   "main": "main.js",
   "type": "module",
   "scripts": {
